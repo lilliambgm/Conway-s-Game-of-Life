@@ -2,12 +2,13 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /// The rules for Conway's Game of Life are as follows:
-/// 1. Any live cell with fewer than two lice neighbours dies, as if by underpopulation;
+/// 1. Any live cell with fewer than two live neighbours dies, as if by underpopulation;
 /// 2. Any live cell with two or three live neighbours lives on to the next generation;
 /// 3. Any live cell with more than three live neighbours dies, as if by overpopulation;
 /// 4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
 public class Main {
+    // ToDo Add comments to what I'm doing here, and change things about so that logic happens in functions, and not just in the main class!
     static void main(String[] args) {
         int width;
         int height;
