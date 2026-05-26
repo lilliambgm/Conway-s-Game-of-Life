@@ -56,4 +56,9 @@ public class Cell {
     public void UpdateState(String state) {
         this.state = state;
     }
+
+    // State accessor for outside the class.
+    public String GetState() {
+        return this.state;
+    }
 }
