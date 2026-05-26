@@ -32,12 +32,8 @@ public class Cell {
             }
         }
         // Applying the rules of the Game of Life for live cells, as per stated in Main.java
-        // ToDo Simplify this into only needing one check for keeping the cell alive, killing the cell with a simple "else" statement.
         if (this.state.equals("0")) {
-            if (aliveNeighbours < 2) {
-                // Killing the cell with less than 2 live cells
-                this.state = "-";
-            } else if (aliveNeighbours == 2 || aliveNeighbours == 3) {
+            if (aliveNeighbours == 2 || aliveNeighbours == 3) {
                 // Keeping the cell alive with 2 or 3 live cells
                 this.state = "0";
             } else {
