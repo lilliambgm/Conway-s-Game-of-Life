@@ -2,9 +2,8 @@ public class Cell {
     private String state;
 
     //Constructor, setting the state to a random state determined by DetermineStarterState()
-    public String cell() {
+    public Cell() {
         DetermineStarterState();
-        return this.state;
     }
 
     //Function using Java.Math, to determine a random cell state, either "-" or "0"
