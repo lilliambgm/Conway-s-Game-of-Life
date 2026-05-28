@@ -47,13 +47,17 @@ public class Cell {
         }
     }
 
+    //<editor-fold desc="Updater">
     // Updating cell state based on passed through state.
     public void UpdateState(String state) {
         this.state = state;
     }
+    //</editor-fold>
 
+    //<editor-fold desc="Accessor">
     // State accessor for outside the class.
     public String GetState() {
         return this.state;
     }
+    //</editor-fold>
 }
