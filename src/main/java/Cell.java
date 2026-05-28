@@ -3,11 +3,11 @@ public class Cell {
 
     //Constructor, setting the state to a random state determined by DetermineStarterState()
     public Cell() {
-        DetermineStarterState();
+        determineStarterState();
     }
 
     //Function using Java.Math, to determine a random cell state, either "-" or "0"
-    private void DetermineStarterState() {
+    private void determineStarterState() {
         // Generating a random number between 0 and 1.
         double random = Math.random();
         if (random < 0.5) {
@@ -21,7 +21,7 @@ public class Cell {
 
     // Determining the new cell state, by considering the neighbour of the current cell, which will be given in the function call.
     // ToDo Make sure that the updated cells are not taken into consideration for cells later on in the game grid.
-    private void DetermineNewState(String[] neighbours) {
+    private void determineNewState(String[] neighbours) {
         // Declaring variable to keep count of the neighbours that are alive.
         int aliveNeighbours = 0;
         // Initiating an enhanced for loop to loop over the neighbour array passed into the function.
@@ -47,13 +47,17 @@ public class Cell {
         }
     }
 
+    //<editor-fold desc="Updater">
     // Updating cell state based on passed through state.
-    public void UpdateState(String state) {
+    public void updateState(String state) {
         this.state = state;
     }
+    //</editor-fold>
 
+    //<editor-fold desc="Accessor">
     // State accessor for outside the class.
-    public String GetState() {
+    public String getState() {
         return this.state;
     }
+    //</editor-fold>
 }
